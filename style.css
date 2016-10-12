@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.main {
+  background: url("img/background.png") no-repeat;
+  width: 100%;
+  max-width: 2000px;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.game_cont {
+  position: relative;
+  width: 50%;
+  width: 700px;
+  border: solid 3px hotpink;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .game_cont .lottery_cont {
+    position: relative;
+    height: 600px;
+    margin-top: 170px;
+    width: 100%;
+    background-color: lightblue;
+    background: url("img/background-ticket.png"); }
+    .game_cont .lottery_cont .logo_cont {
+      margin: -170px auto 0 auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 20px solid white;
+      background-color: goldenrod;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .game_cont .lottery_cont .logo_cont .logo {
+        height: 30px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+
+/*# sourceMappingURL=style.css.map */
