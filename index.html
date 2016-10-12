@@ -5,19 +5,51 @@
 		<script src="script.js"></script>
 		<script src="frameworks/jquery-2.2.0.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css" title="default">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		
 		<title> Lottery_test </title>
 	</head>
 
 	<body onload="start()">
 		<div class="main">
-			<div class="game_cont">
+			<div class="game_cont step1">
 				<div class="lottery_cont">
 					<div class="logo_cont">
 						<div class="logo">Logo</div>
 					</div>
+					<div class="lottery">
+						<div class="text_discover">
+							DISCOVER WHEN YOU WOULD HAVE WON THE LOTTERY<br>
+							AND HOW MUCH YOU WOULD HAVE WON
+						</div>
+						<img class="img_dashes" src="img/dashed-lines.png">
+						<div class="results_tit">RESULTS</div>
+						<div class="text_prompt">ENTER YOUR LUCKY NUMBERS</div>
+						<form class="form1" action="">
+							<input class="input_value" type="text" name="num0" value="0">
+							<input class="input_value" type="text" name="num1" value="1">
+							<input class="input_value" type="text" name="num2" value="2">
+							<input class="input_value" type="text" name="num3" value="3">
+							<input class="input_value" type="text" name="num4" value="4">
+							<input class="input_value" type="text" name="num5" value="5">
+						</form>
+						<div class="num_tit">YOUR LUCKY NUMBERS ARE</div>
+						<div class="num_display"></div>
+						<img class="img_dashes dashes1" src="img/dashed-lines.png">
+						<div class="calculating">CALCULATING</div>
+						<div class="spinner"></div>
+						<div onclick="submit()" class="submit_btn"> SHOW ME THE MONEY </div>
+						<div class="couple_mins">
+							THIS MIGHT TAKE A COUPLE OF MINUTES,<br>
+							WE ARE LOOKING OVER THE PAST 20 YEARS<br>
+							TO FIND IF YOU WOULD HAVE BEEN<br>
+							AS RICH AS KIM KARDASHIAN'S BACKSIDE<br>
+						</div>
+					</div>
 				</div>
 			</div>
+			<img class="img_plane" src="img/airplane.png">
+			<img class="img_jet" src="img/jet.png">
 		</div>
 
 	</body>

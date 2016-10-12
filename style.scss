@@ -24,49 +24,230 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	@include flex-center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	background-color: #1897ba;
+	justify-content: flex-start;
+	@include flex_g;
 }
 
 .main {
-	background: url('img/background.png') no-repeat;
+	background: url('img/background.png') no-repeat center;
+	background-size: cover;
 	width: 100%;
 	max-width: 2000px;
 	height: 100%;
-	@include flex-center;
+	justify-content: center;
+	align-items: flex-start;
+	@include flex_g;
+
+	.img_plane {
+		position: absolute;
+		height: 40%;
+		right: 0;
+		bottom: 250px;
+	}
+
+	.img_jet {
+		position: absolute;
+		height: 100px;
+		left: 50px;
+		bottom: 20%;
+	}
 }
 
 .game_cont {
 	position: relative;
-	// height: 100%;
+	height: auto;
 	width: 50%;
 	width: 700px;
 	border: solid 3px hotpink;
 	flex-direction: column;
+	z-index: 1;
 	@include flex_center;
+}
 
-	.lottery_cont {
-		position: relative;
-		height: 600px;
-		margin-top: 170px;
-		width: 100%;
-		background-color: lightblue;
-		background: url('img/background-ticket.png');
+.lottery_cont {
+	position: relative;
+	height: auto;
+	min-height: 485px;
+	margin: 135px 0 50px 0;
+	width: 100%;
+	background-color: lightblue;
+	background: url('img/background-ticket.png');
+	border: solid 25px white;
+	flex-direction: column;
+	align-items: center;
+	@include flex_g;
 
-		.logo_cont {
-			margin: -170px auto 0 auto;
-			width: 300px;
-			height: 300px;
-			border-radius: 50%;
-			border: 20px solid white;
-			background-color: goldenrod;
+	.logo_cont {
+		margin: -145px auto 0 auto;
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		border: 10px solid white;
+		background-color: rgb(255, 253, 246);
+		@include flex_center;
+
+		.logo {
+			height: 30px;
+			font-size: 70px;
 			@include flex_center;
+		}
+	}
 
-			.logo {
-				height: 30px;
-				@include flex_center;
+	.lottery {
+		flex-direction: column;
+		height: -webkit-calc(100% - 155px);
+		margin-bottom: 30px;
+		text-align: center;
+		width: 95%;
+		justify-content: space-around;
+		align-items: center;
+		@include flex_g;
+
+		* {
+			margin-top: 30px;
+		}
+
+		.text_discover {
+			font-weight: 500;
+			font-size: 20px;
+		}
+
+		.img_dashes {
+			width: 95%;
+		}
+
+		.dashes1 {
+			.step1 & {
+				display: none;
+			}
+
+			.step2 & {
+				@include flex_g;
+			}
+		}
+
+		.text_prompt {
+			.step1 & {
+				@include flex_g;
+			}
+
+			.step2 & {
+				display: none;
+			}	
+		}
+
+		.form1 {
+			flex-direction: row;
+			@include flex_g;
+
+			.step2 & {
+				display: none;
+			}
+
+			input {
+				.step1 & {
+					width: 60px;
+					height: 40px;
+					margin: 0 5px;
+					font-size: 30px;
+					font-weight: bold;
+					text-align: center;
+				}
+				.step2 & {
+					display: none;
+				}
+			}
+		}
+
+		.submit_btn {
+			.step1 & {
+				background-color: gray;
+				padding: 10px 20px;
+				box-shadow: 1px 1px 3px gray;
+				color: white;
+				font-weight: 500;
+				@include flex_g;
+			}
+
+			.step2 & {
+				display: none;
+			}
+		}
+		
+		.num_tit {
+			.step1 & {
+				display: none;
+			}
+		}
+
+		.num_display {
+			.step1 & {
+				display: none;
+			}
+			.step2 & {
+				letter-spacing: 20px;
+				font-size: 24px;
+			}
+		}
+
+		.calculating {
+			.step1 & {
+				display: none;
+			}
+			.step2 & {
+				font-weight: bold;
+				@include flex_g;
+			}
+		}
+
+		.spinner {
+		    .step1 & {
+		    	display: none;
+		    }
+		    .step2 & {
+		    	margin-top: 15px;
+		    	border: 7px solid gray;
+			    border-top: 7px solid black;
+			    border-radius: 50%;
+			    width: 35px;
+			    height: 35px;
+			    animation: spinning 1.5s linear infinite;
+		    }
+		}
+
+		.couple_mins {
+			.step1 & {
+				display: none;
+			}
+			.step2 & {
+				margin-top: 15px;
+				@include flex_g;
 			}
 		}
 	}
 }
 
+.game_cont {
+	&.step1 {
+		
+	}
 
+	&.step2 {
+		input, form {
+			display: none !important;
+		}
+
+		.num_tit {
+			@include flex_g;
+		}
+	}
+}
+
+
+@keyframes spinning {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
