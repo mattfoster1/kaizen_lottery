@@ -63,7 +63,7 @@ html, body {
 	height: auto;
 	width: 50%;
 	width: 700px;
-	border: solid 3px hotpink;
+	// border: solid 3px hotpink;
 	flex-direction: column;
 	z-index: 1;
 	@include flex_center;
@@ -152,7 +152,9 @@ html, body {
 				@include flex_g;
 			}	
 			
-			.results_tit {}
+			.results_tit {
+				margin-top: 0;
+			}
 		
 			.img_congrats {
 				width: 60%;
@@ -177,18 +179,24 @@ html, body {
 				display: inherit;
 				font-size: 18px;
 				font-weight: normal;
+				margin-top: 0;
 				.win_LHS {
 					text-align: left;
+					margin-top: 0;
 				}
 				.win_RHS {
 					text-align: right;
+					margin-top: 0;
 				}
 				.win {
 					margin-top: 0;
 				}
 			}
 
-			.share_tit {}
+			.share_tit {
+				margin-top: 0;
+			}
+
 			.share_btns_cont {
 
 				display: inherit;
@@ -243,13 +251,15 @@ html, body {
 
 		.submit_btn {
 			.step1 & {
-				background-color: rgba(0,0,0,0.7);
+				background-color: rgba(70,70,70,0.7);
+				// background-color: red;
 				padding: 10px 20px;
 				box-shadow: 1px 1px 3px gray;
-				color: white;
+				color: rgb(200,200,200);
+				// color: white;
 				font-size: 20px;
 				font-weight: 500;
-				cursor: pointer;
+				cursor: default;
 				@include flex_g;
 			}
 
