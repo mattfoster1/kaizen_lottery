@@ -23,28 +23,60 @@
 							AND HOW MUCH YOU WOULD HAVE WON
 						</div>
 						<img class="img_dashes" src="img/dashed-lines.png">
-						<div class="results_tit">RESULTS</div>
+
 						<div class="text_prompt">ENTER YOUR LUCKY NUMBERS</div>
 						<form class="form1" action="">
-							<input class="input_value" type="text" name="num0" value="0">
-							<input class="input_value" type="text" name="num1" value="1">
-							<input class="input_value" type="text" name="num2" value="2">
-							<input class="input_value" type="text" name="num3" value="3">
-							<input class="input_value" type="text" name="num4" value="4">
+							<input class="input_value" type="text" name="num0" value="23">
+							<input class="input_value" type="text" name="num1" value="09">
+							<input class="input_value" type="text" name="num2" value="45">
+							<input class="input_value" type="text" name="num3" value="20">
+							<input class="input_value" type="text" name="num4" value="6">
 							<input class="input_value" type="text" name="num5" value="5">
 						</form>
+
 						<div class="num_tit">YOUR LUCKY NUMBERS ARE</div>
 						<div class="num_display"></div>
 						<img class="img_dashes dashes1" src="img/dashed-lines.png">
-						<div class="calculating">CALCULATING</div>
-						<div class="spinner"></div>
-						<div onclick="submit()" class="submit_btn"> SHOW ME THE MONEY </div>
-						<div class="couple_mins">
-							THIS MIGHT TAKE A COUPLE OF MINUTES,<br>
-							WE ARE LOOKING OVER THE PAST 20 YEARS<br>
-							TO FIND IF YOU WOULD HAVE BEEN<br>
-							AS RICH AS KIM KARDASHIAN'S BACKSIDE<br>
+
+						<div class="calculating_cont">
+							<div class="calculating">CALCULATING</div>
+							<div class="spinner"></div>
+							<div class="couple_mins">
+								THIS MIGHT TAKE A COUPLE OF MINUTES,<br>
+								WE ARE LOOKING OVER THE PAST 20 YEARS<br>
+								TO FIND IF YOU WOULD HAVE BEEN<br>
+								AS RICH AS KIM KARDASHIAN'S BACKSIDE<br>
+							</div>
 						</div>
+
+						<div class="results_cont">
+							<div class="results_tit">RESULTS</div>
+							<img class="img_congrats" src="img/yes.png">
+							<div class="winnings_tit">YOU WOULD HAVE WON</div>
+							<div class="winnings">£1,234,567</div>
+							<div class="winnings_chart">
+								<div class="win_LHS">
+									<div class="win_tit">DATE</div><br>
+									<div class="win_date win">DAY DD/MM/YYYY</div>
+									<!-- win classes may need to be generated dynamically, as I am unsure of numbers (these are examples, will need to be removed) -->
+								</div>
+								<div class="win_RHS">
+									<div class="win_tit">AMOUNT</div><br>
+									<div class="win_amt win">£ 1,234,567</div>
+									<!-- win classes may need to be generated dynamically, as I am unsure of numbers (these are examples, will need to be removed) -->
+								</div>
+							</div>
+						</div> <!-- end of results_cont -->
+						<img class="img_dashes dashes2" src="img/dashed-lines.png">
+						<div class="share_cont">
+							<div class="share_tit">LOVE THIS? EMBED AND SHARE IT!</div>
+							<div class="share_btns_cont">
+								<div id="embed_btn">EMBED</div>
+								<div id="share_btn">SHARE</div>
+							</div>
+						</div>
+
+						<div onclick="submit()" class="submit_btn"> SHOW ME THE MONEY </div>
 					</div>
 				</div>
 			</div>

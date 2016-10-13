@@ -6,6 +6,8 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  word-spacing: 6px;
   font-weight: bold;
   background-color: #1897ba;
   justify-content: flex-start;
@@ -123,13 +125,65 @@ html, body {
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
+    .step1 .lottery_cont .lottery .dashes2, .step2 .lottery_cont .lottery .dashes2 {
+      display: none; }
+    .step3 .lottery_cont .lottery .dashes2 {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+    .lottery_cont .lottery .results_cont, .lottery_cont .lottery .share_cont {
+      width: 75%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center; }
+      .step1 .lottery_cont .lottery .results_cont, .step2 .lottery_cont .lottery .results_cont, .step1 .lottery_cont .lottery .share_cont, .step2 .lottery_cont .lottery .share_cont {
+        display: none; }
+      .step3a .lottery_cont .lottery .results_cont, .step3a .lottery_cont .lottery .share_cont {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; }
+      .lottery_cont .lottery .results_cont .img_congrats, .lottery_cont .lottery .share_cont .img_congrats {
+        width: 60%; }
+      .lottery_cont .lottery .results_cont .winnings, .lottery_cont .lottery .share_cont .winnings {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        font-size: 30px;
+        width: 250px;
+        margin-top: 8px;
+        letter-spacing: 3px; }
+      .lottery_cont .lottery .results_cont .winnings_chart, .lottery_cont .lottery .share_cont .winnings_chart {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        display: inherit;
+        font-size: 18px;
+        font-weight: normal; }
+        .lottery_cont .lottery .results_cont .winnings_chart .win_LHS, .lottery_cont .lottery .share_cont .winnings_chart .win_LHS {
+          text-align: left; }
+        .lottery_cont .lottery .results_cont .winnings_chart .win_RHS, .lottery_cont .lottery .share_cont .winnings_chart .win_RHS {
+          text-align: right; }
+        .lottery_cont .lottery .results_cont .winnings_chart .win, .lottery_cont .lottery .share_cont .winnings_chart .win {
+          margin-top: 0; }
+      .lottery_cont .lottery .results_cont .share_btns_cont, .lottery_cont .lottery .share_cont .share_btns_cont {
+        display: inherit;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%; }
+        .lottery_cont .lottery .results_cont .share_btns_cont #embed_btn, .lottery_cont .lottery .results_cont .share_btns_cont #share_btn, .lottery_cont .lottery .share_cont .share_btns_cont #embed_btn, .lottery_cont .lottery .share_cont .share_btns_cont #share_btn {
+          color: white;
+          background-color: rgba(0, 0, 0, 0.7);
+          padding: 15px 30px; }
     .step1 .lottery_cont .lottery .text_prompt {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-    .step2 .lottery_cont .lottery .text_prompt {
+    .step2 .lottery_cont .lottery .text_prompt, .step3a .lottery_cont .lottery .text_prompt {
       display: none; }
     .lottery_cont .lottery .form1 {
       flex-direction: row;
@@ -138,7 +192,7 @@ html, body {
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-      .step2 .lottery_cont .lottery .form1 {
+      .step2 .lottery_cont .lottery .form1, .step3a .lottery_cont .lottery .form1 {
         display: none; }
       .step1 .lottery_cont .lottery .form1 input {
         width: 60px;
@@ -150,17 +204,19 @@ html, body {
       .step2 .lottery_cont .lottery .form1 input {
         display: none; }
     .step1 .lottery_cont .lottery .submit_btn {
-      background-color: gray;
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 10px 20px;
       box-shadow: 1px 1px 3px gray;
       color: white;
+      font-size: 20px;
       font-weight: 500;
+      cursor: pointer;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-    .step2 .lottery_cont .lottery .submit_btn {
+    .step2 .lottery_cont .lottery .submit_btn, .step3a .lottery_cont .lottery .submit_btn {
       display: none; }
     .step1 .lottery_cont .lottery .num_tit {
       display: none; }
@@ -169,34 +225,39 @@ html, body {
     .step2 .lottery_cont .lottery .num_display {
       letter-spacing: 20px;
       font-size: 24px; }
-    .step1 .lottery_cont .lottery .calculating {
+    .step1 .lottery_cont .lottery .calculating_cont, .step3a .lottery_cont .lottery .calculating_cont {
       display: none; }
-    .step2 .lottery_cont .lottery .calculating {
-      font-weight: bold;
+    .step2 .lottery_cont .lottery .calculating_cont {
+      flex-direction: column;
+      align-items: center;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-    .step1 .lottery_cont .lottery .spinner {
-      display: none; }
-    .step2 .lottery_cont .lottery .spinner {
-      margin-top: 15px;
+    .lottery_cont .lottery .calculating_cont .calculating {
+      font-weight: bold; }
+    .lottery_cont .lottery .calculating_cont .spinner {
+      margin: 20px;
       border: 7px solid gray;
       border-top: 7px solid black;
       border-radius: 50%;
       width: 35px;
       height: 35px;
       animation: spinning 1.5s linear infinite; }
-    .step1 .lottery_cont .lottery .couple_mins {
-      display: none; }
-    .step2 .lottery_cont .lottery .couple_mins {
-      margin-top: 15px;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex; }
+      .step2 .lottery_cont .lottery .calculating_cont .spinner {
+        display: block; }
+    .lottery_cont .lottery .calculating_cont .couple_mins {
+      font-size: 20px; }
+      .step1 .lottery_cont .lottery .calculating_cont .couple_mins, .step3a .lottery_cont .lottery .calculating_cont .couple_mins {
+        display: none; }
+      .step2 .lottery_cont .lottery .calculating_cont .couple_mins {
+        margin-top: 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; }
 
 .game_cont.step2 input, .game_cont.step2 form {
   display: none !important; }

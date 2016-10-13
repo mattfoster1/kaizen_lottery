@@ -25,6 +25,8 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	word-spacing: 6px;
 	font-weight: bold;
 	background-color: #1897ba;
 	justify-content: flex-start;
@@ -123,9 +125,86 @@ html, body {
 			.step1 & {
 				display: none;
 			}
-
 			.step2 & {
 				@include flex_g;
+			}
+		}
+
+		.dashes2 {
+			.step1 &, .step2 & {
+				display: none;
+			}
+			.step3 & {
+				@include flex_g;
+			}
+		}			
+
+		.results_cont, .share_cont {
+			width: 75%;
+			height: 100%;
+			flex-direction: column;
+			align-items: center;
+
+			.step1 &, .step2 & {
+				display: none;
+			}
+			.step3a & {	
+				@include flex_g;
+			}	
+			
+			.results_tit {}
+		
+			.img_congrats {
+				width: 60%;
+			}
+
+			.winnings_tit {}
+
+			.winnings {
+				color: white;
+				background-color: rgba(0,0,0,0.7);
+				font-size: 30px;
+				width: 250px;
+				margin-top: 8px;
+				letter-spacing: 3px;
+				// will need to be centered etc...
+			}
+
+			.winnings_chart {
+				width: 100%;
+				flex-direction: row;
+				justify-content: space-between;
+				display: inherit;
+				font-size: 18px;
+				font-weight: normal;
+				.win_LHS {
+					text-align: left;
+				}
+				.win_RHS {
+					text-align: right;
+				}
+				.win {
+					margin-top: 0;
+				}
+			}
+
+			.share_tit {}
+			.share_btns_cont {
+
+				display: inherit;
+				flex-direction: row;
+				justify-content: space-between;
+				width: 100%;
+				// font-size: 25px;
+
+				#embed_btn, #share_btn {
+					color: white;
+					background-color: rgba(0,0,0,0.7);
+					padding: 15px 30px;
+					
+				}
+				#embed_btn {}
+				#share_btn {}
 			}
 		}
 
@@ -134,7 +213,7 @@ html, body {
 				@include flex_g;
 			}
 
-			.step2 & {
+			.step2 &, .step3a & {
 				display: none;
 			}	
 		}
@@ -143,7 +222,7 @@ html, body {
 			flex-direction: row;
 			@include flex_g;
 
-			.step2 & {
+			.step2 &, .step3a & {
 				display: none;
 			}
 
@@ -164,15 +243,17 @@ html, body {
 
 		.submit_btn {
 			.step1 & {
-				background-color: gray;
+				background-color: rgba(0,0,0,0.7);
 				padding: 10px 20px;
 				box-shadow: 1px 1px 3px gray;
 				color: white;
+				font-size: 20px;
 				font-weight: 500;
+				cursor: pointer;
 				@include flex_g;
 			}
 
-			.step2 & {
+			.step2 &, .step3a & {
 				display: none;
 			}
 		}
@@ -193,40 +274,46 @@ html, body {
 			}
 		}
 
-		.calculating {
-			.step1 & {
+
+		.calculating_cont {
+			.step1 &, .step3a & {
 				display: none;
 			}
 			.step2 & {
-				font-weight: bold;
+				flex-direction: column;
+				align-items: center;
 				@include flex_g;
+			}
+
+			.calculating {
+				font-weight: bold;			
+			}
+
+			.spinner {
+			    margin: 20px;
+			    	border: 7px solid gray;
+				    border-top: 7px solid black;
+				    border-radius: 50%;
+				    width: 35px;
+				    height: 35px;
+				    animation: spinning 1.5s linear infinite;
+			    .step2 & {
+			    	display: block;
+			    }
+			}
+
+			.couple_mins {
+				font-size: 20px;
+				.step1 &, .step3a & {
+					display: none;
+				}
+				.step2 & {
+					margin-top: 0;
+					@include flex_g;
+				}
 			}
 		}
 
-		.spinner {
-		    .step1 & {
-		    	display: none;
-		    }
-		    .step2 & {
-		    	margin-top: 15px;
-		    	border: 7px solid gray;
-			    border-top: 7px solid black;
-			    border-radius: 50%;
-			    width: 35px;
-			    height: 35px;
-			    animation: spinning 1.5s linear infinite;
-		    }
-		}
-
-		.couple_mins {
-			.step1 & {
-				display: none;
-			}
-			.step2 & {
-				margin-top: 15px;
-				@include flex_g;
-			}
-		}
 	}
 }
 

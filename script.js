@@ -1,4 +1,5 @@
 var user_input = [];
+var rawData;
 
 var nullFunc = function() {
 	
@@ -39,6 +40,10 @@ var nullFunc = function() {
 
 var start = function() {
 	// TASK: Put in a checker for unique numbers (onkeyup) in inputs
+	$.ajax({url: "data.csv", success: function(result){
+        var rawData = result;
+        console.log(rawData[1] + rawData[2] + rawData[3]);
+    }});
 }
 
 var submit = function() {
@@ -48,7 +53,13 @@ var submit = function() {
 	for (n=0; n<6; n++) {
 		var input_temp = $("input[name=" + "num" + n + "]").val(); 
 		
-		console.log(user_display);
+		// console.log(user_display);
+		console.log(input_temp);
+		if (input_temp[0] == "0" && input_temp[1]) { //stops values being 01, or 02 etc...
+			input_temp = input_temp[1];
+			// TASK: check number isn't "00" either
+		}
+
 		// console.log(input_temp);
 		user_input.push(input_temp); //takes temp values and pushes onto array
 		user_display += input_temp + " "; //shows values in text on board
@@ -58,19 +69,29 @@ var submit = function() {
 	$(".num_display").html(user_display) 
 	console.log(user_input);
 
-	//NEXT STEP: change to loading page
-	// $(".game_cont").removeClass("step1");
-	// $(".game_cont").addClass("step2");
+	
+	$(".game_cont").removeClass("step1"); // switches to loading page
+	$(".game_cont").addClass("step2");
 
-	stepThree("a");
-
+	// stepThree("a"); //placeholder - changes to 'you would have won!' page
+	filter_data();
 }
 
 var stepThree = function(pass_fail) {
 	if (pass_fail == "a") {
-		$(".game_cont").removeClass("step2");
-		$(".game_cont").addClass("step3a");	
+		$(".game_cont").removeClass("step1");
+		// $(".game_cont").removeClass("step2");
+		$(".game_cont").addClass("step3a");
+		console.log("a");
 	}
 
 	
+}
+
+var filter_data = function() {
+	compare_data();
+}
+
+var compare_data = function() {
+
 }
