@@ -37,6 +37,7 @@ var submit = function() {
 
 	user_pwr_ball = user_input[6];
 	user_input.pop();
+	user_input.sort();
 	compare_data_threeBalls();
 }
 
