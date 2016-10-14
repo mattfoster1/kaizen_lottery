@@ -148,7 +148,7 @@ html, body {
 			.step1 &, .step2 & {
 				display: none;
 			}
-			.step3a & {	
+			.step3a &, .step3b & {	
 				@include flex_g;
 			}	
 			
@@ -158,6 +158,10 @@ html, body {
 		
 			.img_congrats {
 				width: 60%;
+				
+				.step3b & {
+					display: none;
+				}
 			}
 
 			.winnings_tit {}
@@ -221,7 +225,7 @@ html, body {
 				@include flex_g;
 			}
 
-			.step2 &, .step3a & {
+			.step2 &, .step3a &, .step3b & {
 				display: none;
 			}	
 		}
@@ -230,7 +234,7 @@ html, body {
 			flex-direction: row;
 			@include flex_g;
 
-			.step2 &, .step3a & {
+			.step2 &, .step3a &, .step3b & {
 				display: none;
 			}
 
@@ -263,7 +267,7 @@ html, body {
 				@include flex_g;
 			}
 
-			.step2 &, .step3a & {
+			.step2 &, .step3a &, .step3b & {
 				display: none;
 			}
 		}
@@ -286,7 +290,7 @@ html, body {
 
 
 		.calculating_cont {
-			.step1 &, .step3a & {
+			.step1 &, .step3a & , .step3b & {
 				display: none;
 			}
 			.step2 & {
@@ -314,7 +318,7 @@ html, body {
 
 			.couple_mins {
 				font-size: 20px;
-				.step1 &, .step3a & {
+				.step1 &, .step3a &, .step3b & {
 					display: none;
 				}
 				.step2 & {

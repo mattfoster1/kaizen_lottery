@@ -139,7 +139,7 @@ html, body {
       align-items: center; }
       .step1 .lottery_cont .lottery .results_cont, .step2 .lottery_cont .lottery .results_cont, .step1 .lottery_cont .lottery .share_cont, .step2 .lottery_cont .lottery .share_cont {
         display: none; }
-      .step3a .lottery_cont .lottery .results_cont, .step3a .lottery_cont .lottery .share_cont {
+      .step3a .lottery_cont .lottery .results_cont, .step3b .lottery_cont .lottery .results_cont, .step3a .lottery_cont .lottery .share_cont, .step3b .lottery_cont .lottery .share_cont {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -149,6 +149,8 @@ html, body {
         margin-top: 0; }
       .lottery_cont .lottery .results_cont .img_congrats, .lottery_cont .lottery .share_cont .img_congrats {
         width: 60%; }
+        .step3b .lottery_cont .lottery .results_cont .img_congrats, .step3b .lottery_cont .lottery .share_cont .img_congrats {
+          display: none; }
       .lottery_cont .lottery .results_cont .winnings, .lottery_cont .lottery .share_cont .winnings {
         color: white;
         background-color: rgba(0, 0, 0, 0.7);
@@ -189,7 +191,7 @@ html, body {
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-    .step2 .lottery_cont .lottery .text_prompt, .step3a .lottery_cont .lottery .text_prompt {
+    .step2 .lottery_cont .lottery .text_prompt, .step3a .lottery_cont .lottery .text_prompt, .step3b .lottery_cont .lottery .text_prompt {
       display: none; }
     .lottery_cont .lottery .form1 {
       flex-direction: row;
@@ -198,7 +200,7 @@ html, body {
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-      .step2 .lottery_cont .lottery .form1, .step3a .lottery_cont .lottery .form1 {
+      .step2 .lottery_cont .lottery .form1, .step3a .lottery_cont .lottery .form1, .step3b .lottery_cont .lottery .form1 {
         display: none; }
       .step1 .lottery_cont .lottery .form1 input {
         width: 60px;
@@ -222,7 +224,7 @@ html, body {
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-    .step2 .lottery_cont .lottery .submit_btn, .step3a .lottery_cont .lottery .submit_btn {
+    .step2 .lottery_cont .lottery .submit_btn, .step3a .lottery_cont .lottery .submit_btn, .step3b .lottery_cont .lottery .submit_btn {
       display: none; }
     .step1 .lottery_cont .lottery .num_tit {
       display: none; }
@@ -231,7 +233,7 @@ html, body {
     .step2 .lottery_cont .lottery .num_display {
       letter-spacing: 20px;
       font-size: 24px; }
-    .step1 .lottery_cont .lottery .calculating_cont, .step3a .lottery_cont .lottery .calculating_cont {
+    .step1 .lottery_cont .lottery .calculating_cont, .step3a .lottery_cont .lottery .calculating_cont, .step3b .lottery_cont .lottery .calculating_cont {
       display: none; }
     .step2 .lottery_cont .lottery .calculating_cont {
       flex-direction: column;
@@ -255,7 +257,7 @@ html, body {
         display: block; }
     .lottery_cont .lottery .calculating_cont .couple_mins {
       font-size: 20px; }
-      .step1 .lottery_cont .lottery .calculating_cont .couple_mins, .step3a .lottery_cont .lottery .calculating_cont .couple_mins {
+      .step1 .lottery_cont .lottery .calculating_cont .couple_mins, .step3a .lottery_cont .lottery .calculating_cont .couple_mins, .step3b .lottery_cont .lottery .calculating_cont .couple_mins {
         display: none; }
       .step2 .lottery_cont .lottery .calculating_cont .couple_mins {
         margin-top: 0;
