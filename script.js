@@ -3,7 +3,7 @@ var rawData = [];
 var success_arr = [];
 var success = {};
 var user_pwr_ball;
-var small_winnings;
+var small_winnings = 0;
 var lucky_dip = false;
 var month;
 var year;
@@ -195,6 +195,7 @@ var endgame = function() {
 		stepThree("a");
 	} else {
 		total += small_winnings;
+		// console.log(total + ", " + small_winnings);
 		$(".winnings").html("£" + total);
 		//TASK: show fail screen content
 		stepThree("b");
